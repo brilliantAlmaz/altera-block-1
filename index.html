@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <div class="basket-wrapper">
+      <h1>Моя корзина</h1>
+      <form name="basket_form" action="#" method="post" id="basket_form">
+         <div class="basket_table__wrapper">
+            <table id="basket_table">
+               <thead>
+                  <tr>
+                     <td colspan="2">Товары</td>
+                     <td>Скидка</td>
+                     <td>Цена</td>
+                     <td>Количество</td>
+                     <td>Сумма</td>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>
+                        <img
+                           src="https://ustage-group.ru/upload/iblock/fc0/r69fiduygl86luvb0254wdyr2eej8ibw/tmp.%207034a31da686396a4066904091c1009b.png"
+                           width="88" height="88" alt="">
+                     </td>
+                     <td>
+                        <a href="#">Активная акустическая система BEHRINGER PK108A, 2-х полосная, 240Вт, 20Гц - 20кГц,
+                           SPL
+                           90дБ, MP3</a>
+                     </td>
+                     <td>0%</td>
+                     <td>15 290 руб.</td>
+                     <td>1 шт.</td>
+                     <td>15 290 руб.</td>
+               </tbody>
+            </table>
+         </div>
+         <div class="price__wrapper">
+            <div class="ordercart_coupon">
+               <span>Введите код купона для скидки:</span><br>
+               <input type="text" id="coupon" name="COUPON" value="">
+               <a class="color-button" href="#">Хорошо</a>
+            </div>
+            <div class="sum">
+               <div class="sum__text">Товаров на: <b>15 290 руб.</b></div>
+               <div class="sum__text">Итого: <b>15 290 руб.</b></div>
+            </div>
+         </div>
+         <div style="clear:both;"></div>
+         <hr>
+         <button class="color-button" type="submit">Оформить заказ</button>
+      </form>
+   </div>
+
+   <style>
+      a {
+         color: inherit;
+         text-decoration: none;
+         white-space: nowrap;
+      }
+
+      .basket-wrapper {
+         margin-top: 0;
+         margin-bottom: 2rem;
+         background: #fff;
+         border-radius: 4px;
+         padding: 2rem;
+      }
+
+      h1 {
+         border-bottom: 1px solid #ededed;
+         padding: 0.2rem 0 1.4rem 0;
+         margin: 0 0 1.8rem 0;
+         font-size: 1.786em;
+         color: #181818;
+         font-weight: bold;
+      }
+
+      .basket_table__wrapper {
+         overflow-x: auto;
+         box-sizing: border-box;
+         width: 100%;
+         border: 1px solid #efefef;
+         border-radius: 4px;
+         font-size: 14px;
+         margin-bottom: 20px;
+      }
+
+      #basket_table {
+         min-width: 100%;
+         border-collapse: collapse;
+         background-color: transparent;
+      }
+
+      #basket_table thead td {
+         padding: 0 10px 0 5px;
+         min-height: 39px;
+         background: #faf9f9;
+         border-bottom: 1px solid #efefef;
+         color: #5a5a5a;
+         font-size: 14px;
+         line-height: 39px;
+         font-weight: 600;
+      }
+
+      #basket_table tbody td {
+         padding: 15px;
+      }
+
+      .price__wrapper {
+         display: flex;
+         align-items: start;
+         justify-content: space-between;
+         gap: 20px;
+         flex-wrap: wrap;
+         margin-bottom: 20px;
+      }
+
+      .sum {
+         width: auto;
+      }
+
+      .ordercart_coupon {
+
+         /*   margin-bottom: 20px; */
+      }
+
+      #coupon {
+         margin: 5px 0;
+         width: 280px;
+         height: 37px;
+         border: 1px solid #e2e2e2;
+         border-radius: 4px;
+         color: #000;
+         background: #faf9f9;
+         box-shadow: none;
+         text-align: left;
+         vertical-align: middle;
+         outline: none;
+         margin-right: 12px;
+      }
+
+      .color-button {
+         background: #d29b0a;
+         color: #fff;
+         border-radius: 4px;
+         padding: 10px;
+         display: inline-block;
+         text-transform: uppercase;
+         font-weight: 600;
+         border: none;
+         cursor: pointer;
+      }
+
+      .color-button:hover {
+         background: #d2190b;
+      }
+
+      .sum {
+         display: flex;
+         flex-direction: column;
+         gap: 5px;
+
+         text-align: right;
+      }
+
+      .sum__text {
+         font-size: 18px;
+      }
+
+      hr {
+         background-color: #e4e6e8;
+         border: none;
+         height: 1px;
+         margin-bottom: 15px;
+      }
+   </style>
+</body>
+
+</html>
