@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Accordeon - Altera</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+
+   <link rel="stylesheet" href="./swiper-bundle.min.css">
+   <script src="./swiper-bundle.min.js"></script>
+   <style>
+      html {
+         font-family: 'Montserrat', 'sans-serif';
+         font-size: 16px;
+      }
+   </style>
+</head>
+
+<!-- 18:57 -->
+
+<!-- break 19:18 -->
+<!-- work 19:26 -->
+<!-- 20:00 -->
+
+<body>
+
+   <style>
+      :root {
+         --main: #434343;
+         --accent: #ffffff;
+         --simple: #64f3a7;
+      }
+
+
+
+
+      .wrapper {
+         padding: 120px 0;
+      }
+
+      h1 {
+         font-size: 2rem;
+         text-align: center;
+         color: #fff;
+      }
+
+      @media (max-width:651px) {
+
+
+         .wrapper {
+            padding: 40px 0;
+         }
+      }
+
+
+
+
+      /*  */
+      html,
+      body {
+         margin: 0;
+         padding: 0;
+         border: 0;
+         height: 100%;
+      }
+
+      .wrapper {
+         padding: 0;
+         position: relative;
+         min-height: 100%;
+      }
+
+      .wrapper .bg img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         display: block;
+         object-fit: cover;
+      }
+
+      .container {
+         max-width: 1280px;
+         margin-left: auto;
+         margin-right: auto;
+         padding: 0 20px;
+      }
+
+      .slider__wrapper {
+         border-radius: 20px;
+         overflow: hidden;
+         padding: 20px;
+         background: #ffffff10;
+         backdrop-filter: blur(30px);
+         position: relative;
+         z-index: 5;
+      }
+
+      .swiper-slide {
+         display: block;
+         height: auto;
+         overflow: hidden;
+         border-radius: 20px;
+      }
+
+      .swiper-wrapper {
+         align-items: stretch;
+      }
+
+      .swiper-slide img {
+         width: 100%;
+         height: 100%;
+         display: block;
+         object-fit: cover;
+      }
+
+      .swiper-slide:before {
+         content: "";
+         background: #fff;
+         top: 0;
+         left: 0;
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         opacity: 0;
+         transition: all 0.3s ease;
+         backdrop-filter: blur(10px);
+         border-radius: 20px;
+         overflow: hidden;
+
+      }
+
+      .swiper-slide span {
+         opacity: 0;
+         width: 80%;
+         height: max-content;
+         position: absolute;
+         bottom: 20px;
+         right: 0;
+         left: 0;
+         margin: auto;
+         text-align: center;
+         font-size: 14px;
+         transition: all 0.3s ease;
+      }
+
+      .swiper-slide:hover span {
+         opacity: 1;
+      }
+
+      .swiper-slide:hover:before {
+         opacity: 1;
+         background: #ffffff50;
+      }
+
+      .swiper-pagination {
+         position: static;
+         margin-top: 30px;
+      }
+
+      .swiper-button-prev:after,
+      .swiper-button-next:after {
+         content: "";
+         display: block;
+      }
+
+      .swiper-button-prev {
+         transform: rotate(180deg);
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+         border-radius: 50%;
+         background: #000;
+         border: 1px solid #fff;
+         width: 48px;
+         height: 48px;
+      }
+
+      .swiper-button-next svg,
+      .swiper-button-prev svg {
+         width: 20px;
+         height: 20px;
+         display: block;
+         position: absolute;
+         top: 0;
+         left: 0;
+         bottom: 0;
+         right: 0;
+         margin: auto;
+      }
+
+      .swiper-button-prev svg path,
+      .swiper-button-next svg path {
+         fill: #fff;
+      }
+
+      .swiper-pagination-bullet-active {
+         background: #000;
+      }
+
+      .container {
+         height: max-content;
+         position: absolute;
+         top: 0;
+         left: 0;
+         bottom: 0;
+         right: 0;
+         margin: auto;
+      }
+
+      @media (max-width:651px) {
+
+         .swiper-button-next,
+         .swiper-button-prev {
+            display: none;
+         }
+
+         .slider__wrapper {
+            padding-left: 0;
+            padding-right: 0;
+         }
+
+      }
+   </style>
+   <!-- 20:30 -->
+   <div class="wrapper">
+      <div class="bg">
+         <img src="./bg.gif" alt="">
+      </div>
+      <div class="container">
+         <div class="slider__wrapper">
+            <h1>Слайдер</h1>
+            <div class='swiper'>
+               <div class='swiper-wrapper'>
+                  <div class='swiper-slide'>
+                     <img src="./01.jpg" alt="">
+                     <span>когда просишь гпт помочь с кодом а он присылает нерабочий</span>
+                  </div>
+                  <div class='swiper-slide'>
+                     <img src="./02.jpg" alt="">
+                     <span>когда выпил кофе и стало плохо</span>
+                  </div>
+                  <div class='swiper-slide'>
+                     <img src="./03.jpg" alt="">
+                     <span>ыъы</span>
+
+                  </div>
+                  <div class='swiper-slide'>
+                     <img src="./03.webp" alt="">
+                     <span>медведи</span>
+
+                  </div>
+                  <div class='swiper-slide'>
+                     <img src="./04.jpg" alt="">
+                     <span>wake up. its the first of the month!</span>
+
+                  </div>
+                  <div class='swiper-slide'>
+                     <img src="./05.jpg" alt="">
+                     <span>жалко парнишку :-с</span>
+
+                  </div>
+
+               </div>
+               <div class='swiper-pagination'></div>
+
+               <div class='swiper-button-prev'><svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M8.293 2.29279C8.48053 2.10532 8.73484 2 9 2C9.26516 2 9.51947 2.10532 9.707 2.29279L14.207 6.79279C14.3945 6.98031 14.4998 7.23462 14.4998 7.49979C14.4998 7.76495 14.3945 8.01926 14.207 8.20679L9.707 12.7068C9.5184 12.8889 9.2658 12.9897 9.0036 12.9875C8.7414 12.9852 8.49059 12.88 8.30518 12.6946C8.11977 12.5092 8.0146 12.2584 8.01233 11.9962C8.01005 11.734 8.11084 11.4814 8.293 11.2928L11 8.49979H1.5C1.23478 8.49979 0.98043 8.39443 0.792893 8.20689C0.605357 8.01936 0.5 7.765 0.5 7.49979C0.5 7.23457 0.605357 6.98022 0.792893 6.79268C0.98043 6.60514 1.23478 6.49979 1.5 6.49979H11L8.293 3.70679C8.10553 3.51926 8.00021 3.26495 8.00021 2.99979C8.00021 2.73462 8.10553 2.48031 8.293 2.29279Z"
+                        fill="black" />
+                  </svg></div>
+               <div class='swiper-button-next'><svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M8.293 2.29279C8.48053 2.10532 8.73484 2 9 2C9.26516 2 9.51947 2.10532 9.707 2.29279L14.207 6.79279C14.3945 6.98031 14.4998 7.23462 14.4998 7.49979C14.4998 7.76495 14.3945 8.01926 14.207 8.20679L9.707 12.7068C9.5184 12.8889 9.2658 12.9897 9.0036 12.9875C8.7414 12.9852 8.49059 12.88 8.30518 12.6946C8.11977 12.5092 8.0146 12.2584 8.01233 11.9962C8.01005 11.734 8.11084 11.4814 8.293 11.2928L11 8.49979H1.5C1.23478 8.49979 0.98043 8.39443 0.792893 8.20689C0.605357 8.01936 0.5 7.765 0.5 7.49979C0.5 7.23457 0.605357 6.98022 0.792893 6.79268C0.98043 6.60514 1.23478 6.49979 1.5 6.49979H11L8.293 3.70679C8.10553 3.51926 8.00021 3.26495 8.00021 2.99979C8.00021 2.73462 8.10553 2.48031 8.293 2.29279Z"
+                        fill="black" />
+                  </svg></div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script>
+
+      document.fonts.onloadingdone = function (fontFaceSetEvent) {
+         new Swiper('.swiper', {
+            // direction: 'vertical',
+            loop: true,
+            // If we need pagination
+            pagination: {
+               el: '.swiper-pagination',
+            },
+            // Navigation arrows
+            navigation: {
+               nextEl: '.swiper-button-next',
+               prevEl: '.swiper-button-prev',
+            },
+            // And if we need scrollbar
+            scrollbar: {
+               el: '.swiper-scrollbar',
+            },
+            breakpoints: {
+               320: {
+                  spaceBetween: 10,
+                  slidesPerView: 1.75,
+                  centeredSlides: true,
+               },
+               451: {
+                  spaceBetween: 10,
+                  slidesPerView: 1.75,
+                  centeredSlides: true,
+               },
+               601: {
+                  spaceBetween: 20,
+                  slidesPerView: 2.25,
+                  centeredSlides: true,
+               },
+               651: {
+                  spaceBetween: 10,
+                  slidesPerView: 3,
+                  centeredSlides: true,
+               },
+               840: {
+                  spaceBetween: 30,
+                  slidesPerView: 4,
+               }
+            }
+         })
+
+      };
+   </script>
+</body>
+
+</html>
