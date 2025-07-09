@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Accordeon - Altera</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <style>
+      html {
+         font-family: 'Montserrat', 'sans-serif';
+         font-size: 16px;
+      }
+   </style>
+</head>
+
+<!-- 18:57 -->
+
+<!-- break 19:18 -->
+<!-- work 19:26 -->
+<!-- 20:00 -->
+
+<body>
+
+   <style>
+      :root {
+         --main: #434343;
+         --accent: #ffffff;
+         --simple: #64f3a7;
+      }
+
+
+
+      .accord__answer {
+         overflow: hidden;
+         font-size: 1rem;
+         height: max-content;
+      }
+
+      .accord__item {
+         margin-top: 20px;
+
+      }
+
+      .accord__item:first-child {
+         margin-top: 0;
+      }
+
+      .accord__quest {}
+
+      .accord__quest {
+         font-size: 1.25rem;
+         font-weight: 600;
+         cursor: pointer;
+         display: flex;
+         align-items: start;
+         justify-content: space-between;
+         gap: 20px;
+         padding: 20px 20px;
+      }
+
+
+      .exit {
+         position: relative;
+         height: 1.5rem;
+         width: 1.5rem;
+         transition: all 0.3s ease;
+         flex: 0 0 1.5rem;
+      }
+
+      .exit:before {
+         content: "";
+         width: 100%;
+         height: 2px;
+         background: var(--accent);
+         position: absolute;
+         display: block;
+         top: 0;
+         left: 0;
+         bottom: 0;
+         right: 0;
+         margin: auto;
+         transform: rotate(90deg);
+         transition: all 0.3s ease;
+      }
+
+      .exit:after {
+         content: "";
+         width: 100%;
+         height: 2px;
+         background: var(--accent);
+         position: absolute;
+         display: block;
+         top: 0;
+         left: 0;
+         bottom: 0;
+         right: 0;
+         margin: auto;
+         transform: rotate(0);
+         transition: all 0.3s ease;
+      }
+
+      .accord__item.open .exit {
+         transform: rotate(45deg)
+      }
+
+      .accord__quest {
+         transition: all 0.3s ease;
+         border-radius: 20px 20px 20px 20px;
+         background: var(--main);
+         color: var(--accent);
+
+      }
+
+      .accord__item.open .accord__quest {
+         border-radius: 20px 20px 0 0;
+
+      }
+
+      .accord__answer {
+         padding: 0 20px;
+
+         background: var(--simple);
+
+      }
+
+      .accord__item.open .accord__answer {
+         padding: 20px;
+         border-radius: 0 0 20px 20px;
+      }
+
+
+      .accord__answer.smooth {
+         transition: all 0.3s ease 0s;
+      }
+
+
+      .accord__body {
+         max-width: 500px;
+         margin-left: auto;
+         margin-right: auto;
+      }
+
+      .wrapper {
+         padding: 120px 0;
+      }
+
+      h1 {
+         font-size: 2rem;
+         text-align: center;
+      }
+
+      @media (max-width:651px) {
+         .accord__quest {
+            font-size: 1rem;
+            padding: 10px;
+            border-radius: 10px;
+         }
+
+         .accord__item.open .accord__quest {
+            border-radius: 10px;
+            border-radius: 10px 10px 0 0;
+         }
+
+         h1 {
+            font-size: 1.5rem;
+         }
+
+         .accord__answer {
+            font-size: 14px;
+            padding: 0 1rem;
+            border-radius: 0 0 10px 10px;
+         }
+
+         .accord__item.open .accord__answer {
+            padding: 1rem;
+         }
+
+         .wrapper {
+            padding: 40px 0;
+         }
+      }
+   </style>
+   <div class="wrapper">
+      <h1>Вопросы и ответы</h1>
+      <div class="accord__body">
+         <div class="accord__item">
+            <div class="accord__quest"><span>Что такое фронтенд-разработка?</span>
+               <div class="exit"></div>
+            </div>
+            <div class="accord__answer">Фронтенд-разработка — это создание клиентской части веб-приложений, которая
+               отвечает за взаимодействие пользователя с
+               сайтом. Она включает в себя использование HTML, CSS и JavaScript для создания интерфейсов, которые
+               отображаются в
+               браузере.
+            </div>
+         </div>
+         <div class="accord__item">
+            <div class="accord__quest"><span>Какие языки программирования используются во фронтенде?</span>
+               <div class="exit"></div>
+            </div>
+            <div class="accord__answer">Основные языки, используемые во фронтенд-разработке, это HTML (для разметки),
+               CSS (для стилизации) и JavaScript (для
+               добавления интерактивности). Также часто применяются библиотеки и фреймворки, такие как React, Vue.js и
+               Angular.</div>
+         </div>
+         <div class="accord__item">
+            <div class="accord__quest"><span>Что такое Responsive Web Design?</span>
+               <div class="exit"></div>
+            </div>
+            <div class="accord__answer">Responsive Web Design (адаптивный веб-дизайн) — это подход к веб-разработке, при
+               котором сайт автоматически
+               подстраивается под размеры экрана устройства, на котором он просматривается. Это достигается с помощью
+               медиа-запросов в
+               CSS и гибких сеток.</div>
+         </div>
+         <div class="accord__item">
+            <div class="accord__quest"><span>Как улучшить производительность фронтенд-приложения?</span>
+               <div class="exit"></div>
+            </div>
+            <div class="accord__answer">Для улучшения производительности фронтенд-приложения можно использовать методы
+               оптимизации, такие как минимизация и
+               сжатие файлов CSS и JavaScript, использование кэширования, уменьшение количества запросов к серверу и
+               оптимизация
+               изображений.</div>
+         </div>
+         <div class="accord__item">
+            <div class="accord__quest"><span>Что такое SPA (Single Page Application)?</span>
+               <div class="exit"></div>
+            </div>
+            <div class="accord__answer">SPA (одностраничное приложение) — это веб-приложение, которое загружает единую
+               HTML-страницу и динамически обновляет
+               содержимое по мере взаимодействия пользователя, без полной перезагрузки страницы. Это позволяет создать
+               более плавный и
+               быстрый пользовательский опыт.</div>
+         </div>
+
+
+
+
+      </div>
+   </div>
+
+   <script>
+
+      document.fonts.onloadingdone = function (fontFaceSetEvent) {
+
+         console.log('loaded');
+
+         const accordItems = document.querySelectorAll('.accord__item');
+
+         accordItems.forEach(item => {
+            // стилизация ответа
+            const itemAnswer = item.querySelector('.accord__answer');
+
+            if (window.innerWidth <= 651) {
+               itemAnswer.dataset.height = itemAnswer.clientHeight + 32 + "px";
+
+            } else {
+               itemAnswer.dataset.height = itemAnswer.clientHeight + 40 + "px";
+
+            }
+            itemAnswer.style.height = 0;
+            itemAnswer.classList.add('smooth');
+
+            // событие нажатие на открытие/закрытие 
+
+            item.querySelector('.accord__quest').addEventListener('click', () => {
+               item.classList.toggle('open');
+               if (item.classList.contains('open')) {
+                  itemAnswer.style.height = itemAnswer.dataset.height
+               } else {
+                  itemAnswer.style.height = 0
+               }
+            })
+         })
+
+
+         function windowChange() {
+            accordItems.forEach(item => {
+               // стилизация ответа
+               item.classList.remove('open')
+               const itemAnswer = item.querySelector('.accord__answer')
+               itemAnswer.classList.remove('smooth');
+               itemAnswer.style.height = 'max-content';
+               itemAnswer.dataset.height = itemAnswer.clientHeight + "px";
+               itemAnswer.style.height = '0';
+               itemAnswer.classList.add('smooth');
+
+            })
+         }
+         window.addEventListener('resize', windowChange)
+
+         windowChange();
+      };
+   </script>
+</body>
+
+</html>
